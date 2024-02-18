@@ -20,7 +20,7 @@ const Header = props => {
             <div className='cartBtn'>
                 <span>1</span>
                 <div className='cartIcon'>
-                    <img src={icon} />
+                    <img src={icon} alt='Cart' />
                 </div>
             </div>
         </div>

@@ -1,4 +1,29 @@
 .addForm{
-    margin-top: 150px;
-    background-color: aqua;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-gap: 5px;
+}
+.heading{
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 2px solid rgba(196, 196, 196, 0.389);
+}
+.heading h4{
+    color: #0008ff;
+}
+.form{
+    margin-top: 5px;
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-columns: 10% 5% 15% 20% 10% 5% 10% 10%;
+    grid-gap: 5px;
+    /* justify-content: center; */
+}
+.form input{
+    display: grid;
+    justify-self: center;
 }
