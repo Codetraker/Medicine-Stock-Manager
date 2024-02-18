@@ -1,0 +1,103 @@
+.Maindiv{
+    background-color:#0008ff ;
+    width: 100%;
+    height: 65px;
+    display: grid;
+    grid-template-columns: 20% 50% 15% 15%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.601);
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid white;
+    background-color:#070dce ;
+}
+.title h1{
+    font-size: x-large;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    padding-left: 10%;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.79);
+}
+.search{
+    display: grid;
+}
+.searchForm{
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+.searchForm input{
+    background-color: #0008ff;
+    color: white;
+}
+.searchForm ::placeholder {
+    color: #ffffff;
+    opacity: 0.7; 
+  }
+.login{
+    display: grid;
+    align-items: center;
+    
+}
+.loginBox{
+    padding-left: 2%;
+    width: 80%;
+    height: 50%;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 15% 80%;
+    background-color: rgb(255, 255, 255);
+    align-self: center;
+    justify-self: center;
+}
+.loginPic{
+    margin-top: 2px;
+    height: 90%;
+    width: 90%;
+    background-color: #0008ff;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+.h4{
+    margin-top: 5px;
+    display: grid;
+    align-self: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    color: #0008ff;
+}
+
+.cartBtn{
+    background-color: rgb(0, 8, 255);
+    display: grid;
+}
+.cartBtn span{
+    position: absolute;
+    color: white;
+    margin-left: 112px;
+    margin-top: 5px;
+}
+.cartIcon{
+    justify-self: center;
+    align-self: center;
+    background-color: #070dce;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+.cartIcon img{
+    height: 30px;
+    width: 30px;
+}
