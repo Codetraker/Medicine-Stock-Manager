@@ -1,0 +1,22 @@
+.formlistMain{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    padding: 20px;
+}
+.formH4{
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 2px solid rgba(171, 171, 171, 0.575);
+}
+.formH4 h4{
+    color: #13bc00;
+    font-size: 25px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.395);
+}
+.formBodyEmpty{
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+    color: rgba(255, 0, 0, 0.626);
+    font-size: small;
+}

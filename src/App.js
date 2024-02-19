@@ -1,5 +1,6 @@
 import './App.css';
 import AddForm from './components/AddForm/AddForm';
+import FormList from './components/Layout/FormList';
 import Header from './components/Layout/Header';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <AddForm />
+      <FormList />
     </>
   );
 }
