@@ -17,8 +17,8 @@ const Header = props => {
                         <div className='h4'>SBA MediCity Ltd</div>
                 </div>
             </div>
-            <div className='cartBtn'>
-                <span>1</span>
+            <div className='cartBtn' onClick={props.onShow}>
+                <span>0</span>
                 <div className='cartIcon'>
                     <img src={icon} alt='Cart' />
                 </div>

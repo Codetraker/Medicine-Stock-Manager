@@ -3,6 +3,7 @@
     margin-right: 10%;
     margin-top: 10px;
     padding: 20px;
+    border-color: blue;
 }
 .formH4{
     font-family: "Montserrat", sans-serif;
@@ -10,8 +11,9 @@
 }
 .formH4 h4{
     color: #13bc00;
+    font-weight: bold;
     font-size: 25px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.395);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.275);
 }
 .formBodyEmpty{
     display: grid;
@@ -19,4 +21,13 @@
     padding: 30px;
     color: rgba(255, 0, 0, 0.626);
     font-size: small;
+}
+.headingList{
+    display: grid;
+    grid-template-columns: 10% 20% 20% 10% 24% 16%;
+    background-color: rgb(223, 230, 255);
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

@@ -1,12 +1,23 @@
 import './App.css';
 import AddForm from './components/AddForm/AddForm';
+import Cart from './components/Cart/Cart';
 import FormList from './components/Layout/FormList';
 import Header from './components/Layout/Header';
+import { useState } from 'react';
 
 function App() {
+  const [isCartShow, setIsCartShow] = useState(false);
+
+  const showCart = () => {
+    setIsCartShow(true);
+  }
+  const hideCart = () => {
+    setIsCartShow(false);
+  }
   return (
     <>
-      <Header />
+      {isCartShow && <Cart onHide={hideCart}/>} 
+      <Header onShow={showCart}/>
       <AddForm />
       <FormList />
     </>

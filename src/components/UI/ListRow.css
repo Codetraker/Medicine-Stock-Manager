@@ -1,0 +1,21 @@
+.listrow{
+    display: grid;
+    grid-template-columns: 10% 20% 20% 10% 8% 8% 8% 16%;
+    margin-bottom: 10px;
+}
+.element{
+    display: grid;
+    justify-content: center;
+}
+.add{
+    background-color: rgb(18, 211, 0);
+    color: white;
+}
+.delete{
+    background-color: red;
+    color: white;
+}
+.sell{
+    background-color: rgb(255, 255, 0);
+    color: rgb(255, 0, 0);
+}

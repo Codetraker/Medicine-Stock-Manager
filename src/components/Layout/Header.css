@@ -53,6 +53,9 @@
     align-self: center;
     justify-self: center;
 }
+.login :hover{
+    background-color:  #c6c4c4;
+}
 .loginPic{
     margin-top: 2px;
     height: 85%;
@@ -100,4 +103,8 @@
 .cartIcon img{
     height: 30px;
     width: 30px;
+}
+.cartBtn :hover,
+.cartBtn :active{
+    background-color: #040995;
 }

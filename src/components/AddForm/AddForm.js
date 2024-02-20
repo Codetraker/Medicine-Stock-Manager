@@ -18,7 +18,7 @@ const AddForm = props => {
                 </div>
                 <div className='priceDiv'>
                     {/* <label htmlFor="price" className="form-label">Price:</label> */}
-                    <input type="number" class="form-control" id="price" placeholder='Enter Price...'/>
+                    <input type="number" class="form-control" id="price" placeholder='Enter Price/item ...'/>
                 </div>
                 <div className='quantDiv'>
                     {/* <label htmlFor="quantity" className="form-label">Quantity:</label> */}
