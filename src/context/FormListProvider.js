@@ -33,7 +33,7 @@ const FormListProvider = props => {
     };
     const deleteItem = (itemId) =>{
         setProduct((prev)=>(
-            prev.map((item)=>item.id !== itemId)
+            prev.filter((item)=>item.id !== itemId)
         ));
     };
 

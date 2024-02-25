@@ -4,7 +4,9 @@ import Cart from './components/Cart/Cart';
 import FormList from './components/Layout/FormList';
 import Header from './components/Layout/Header';
 import { useState } from 'react';
+
 import FormListProvider from './context/FormListProvider';
+import CartProvider from './context/CartProvider';
 
 
 
@@ -20,10 +22,12 @@ function App() {
  
   return (
     <FormListProvider>
-      {isCartShow && <Cart onHide={hideCart}/>} 
-      <Header onShow={showCart}/>
-      <AddForm />
-      <FormList />
+      <CartProvider>
+        {isCartShow && <Cart onHide={hideCart}/>} 
+        <Header onShow={showCart}/>
+        <AddForm />
+        <FormList />
+      </CartProvider>
     </FormListProvider>
   );
 }
