@@ -4,6 +4,9 @@ import Cart from './components/Cart/Cart';
 import FormList from './components/Layout/FormList';
 import Header from './components/Layout/Header';
 import { useState } from 'react';
+import FormListProvider from './context/FormListProvider';
+
+
 
 function App() {
   const [isCartShow, setIsCartShow] = useState(false);
@@ -14,25 +17,17 @@ function App() {
   const hideCart = () => {
     setIsCartShow(false);
   }
+ 
   return (
-    <>
+    <FormListProvider>
       {isCartShow && <Cart onHide={hideCart}/>} 
       <Header onShow={showCart}/>
       <AddForm />
       <FormList />
-    </>
+    </FormListProvider>
   );
 }
 
 export default App;
 
 
-// // <uniquifier>: Use a uniquifier for the class name
-// // <weight>: Use a value from 100 to 900
-
-// .montserrat-<uniquifier> {
-//   font-family: "Montserrat", sans-serif;
-//   font-optical-sizing: auto;
-//   font-weight: <weight>;
-//   font-style: normal;
-// }

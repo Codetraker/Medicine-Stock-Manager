@@ -1,6 +1,6 @@
 .listrow{
     display: grid;
-    grid-template-columns: 10% 20% 20% 10% 8% 8% 8% 16%;
+    grid-template-columns: 10% 20% 10% 10% 8% 8% 8% 10% 16%;
     margin-bottom: 10px;
 }
 .element{
@@ -18,4 +18,9 @@
 .sell{
     background-color: rgb(255, 255, 0);
     color: rgb(255, 0, 0);
+}
+#quantityToSellAdd{
+    width: 50%;
+    justify-self: center;
+    background-color: rgb(238, 238, 238);
 }

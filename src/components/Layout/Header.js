@@ -1,5 +1,7 @@
 import './Header.css';
-import icon from '../../assets/cart-78-48.png'
+import icon from '../../assets/cart-78-48.png';
+
+
 const Header = props => {
     return (
         <div className='Maindiv'>
@@ -7,8 +9,8 @@ const Header = props => {
                 <h1>MEDStock .in</h1>
             </div>
             <div className='search'>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" className='searchForm'>
-                    <input type="search" class="form-control" placeholder="Search from Inventory..." aria-label="Search" spellcheck="false" data-ms-editor="true"/>
+                <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 searchForm" role="search">
+                    <input type="search" className="form-control" placeholder="Search from Inventory..." aria-label="Search" data-ms-editor="true"/>
                 </form>
             </div>
             <div className='login'>
