@@ -37,7 +37,7 @@ const AddForm = props => {
             <form className='form' onSubmit={submitHandler}>
                 <div className='idDiv'> 
                     {/* <label htmlFor="oid" className="form-label">Medicine Id:</label> */}
-                    <input ref={medId} type="number" className="form-control" id="oid" placeholder='Enter Id ...' required />
+                    <input ref={medId} type="number" className="form-control" id="oid" placeholder='Enter Id ...' min={0} required />
                 </div>
                 <div className='nameDiv'>
                     {/* <label htmlFor="name" className="form-label">Medicine Name:</label> */}
@@ -45,11 +45,11 @@ const AddForm = props => {
                 </div>
                 <div className='priceDiv'>
                     {/* <label htmlFor="price" className="form-label">Price:</label> */}
-                    <input ref={medPrice} type="number" className="form-control" id="price" placeholder='Enter Price/item ...' required/>
+                    <input ref={medPrice} type="number" className="form-control" id="price" placeholder='Enter Price/item ...' min={1} required/>
                 </div>
                 <div className='quantDiv'>
                     {/* <label htmlFor="quantity" className="form-label">Quantity:</label> */}
-                    <input ref={medQuant} type="number" className="form-control" id="quantity" placeholder='Quantity...' required />
+                    <input ref={medQuant} type="number" className="form-control" id="quantity" placeholder='Quantity...' min={0} required />
                 </div>
                 <div className='button'>
                     <button type="submit" className="btn btn-success">+Add New</button>

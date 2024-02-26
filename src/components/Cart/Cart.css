@@ -26,3 +26,7 @@
     background-color: rgb(255, 136, 0);
     color: white;
 }
+.cartUl{
+    max-height: 20rem;
+    overflow: auto
+}

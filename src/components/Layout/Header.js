@@ -1,8 +1,16 @@
 import './Header.css';
 import icon from '../../assets/cart-78-48.png';
+import { useContext } from 'react';
+import CartContext from '../../context/Cart-context';
 
 
 const Header = props => {
+    const ctxCart = useContext(CartContext);
+
+    const numberofitemCart = ctxCart.items.reduce((currNum, item)=>{
+        return currNum + item.quantity;
+    }, 0);
+
     return (
         <div className='Maindiv'>
             <div className='title'>
@@ -20,7 +28,7 @@ const Header = props => {
                 </div>
             </div>
             <div className='cartBtn' onClick={props.onShow}>
-                <span>0</span>
+                <span>{numberofitemCart}</span>
                 <div className='cartIcon'>
                     <img src={icon} alt='Cart' />
                 </div>
