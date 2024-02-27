@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import CartListContext from "./Cart-context";
 
 
@@ -42,11 +42,22 @@ const cartReducer = (state,action) => {
             };
         }
     }
+    if(action.type === 'CLEAR'){
+        return defaultCartState;
+    }
     
     return defaultCartState;
 }
 const CartProvider = props =>{
-    const [cartState, dispatchCartAction] = useReducer(cartReducer,defaultCartState);
+    const storedCartData = JSON.parse(localStorage.getItem('cart'));
+    const initialCartState = storedCartData ? storedCartData : defaultCartState;
+    
+    const [cartState, dispatchCartAction] = useReducer(cartReducer,initialCartState);
+
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cartState));
+    }, [cartState]);
 
     const addItemToCart = item =>{
         dispatchCartAction({type: 'ADD', item:item});
@@ -55,12 +66,16 @@ const CartProvider = props =>{
     const removeItemFromCart = id =>{
         dispatchCartAction({type: 'REMOVE',id:id});
     };
-    
+    const clearItemFromCart = () => {
+        dispatchCartAction({ type: 'CLEAR' });
+    };
+
     const cartContextValue = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCart,
-        removeItem: removeItemFromCart
+        removeItem: removeItemFromCart,
+        clearCart: clearItemFromCart
     };
     
     return (

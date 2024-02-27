@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import FormListContext from "./FormList-context";
 
 const FormListProvider = props => {
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState(()=>{
+        const storedProduct = localStorage.getItem('product');
+        return storedProduct ? JSON.parse(storedProduct) : [];
+    });
+    useEffect(() => {
+        localStorage.setItem('product', JSON.stringify(product));
+    }, [product]);
     
     const addProdHandler = (newItem) =>{
         setProduct([...product,newItem]);

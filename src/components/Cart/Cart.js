@@ -20,6 +20,9 @@ const Cart = props =>{
         cartCtx.removeItem(id);
         updateQuantity(id, 1);
     };
+    const orderHandler = () =>{
+        cartCtx.clearCart();
+    };
 
     const cartItem = (
         <div className='cartUl'>
@@ -43,7 +46,7 @@ const Cart = props =>{
             <span>₹{total}</span>
         </div>
         <div className='buttonCart'>
-            {hasItem && <div><button className='btn orderbtn'>Order</button></div>}
+            {hasItem && <div><button className='btn orderbtn' onClick={orderHandler}>Order</button></div>}
             <div><button className='btn closebtn' onClick={props.onHide}>Close</button></div>
         </div>
     </Modala>
